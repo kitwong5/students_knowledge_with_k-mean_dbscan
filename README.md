@@ -1,7 +1,6 @@
 # Analysis on Students’ Knowledge with Cluster Modeling
 
-The goal of this project is to perform classification on developing students’ knowledge domain through data modeling. This project will employ K-mean and DBSCAN approach in clustering modeling. The dataset used in this project was collected by H. T. Kahraman, Sagiroglu, S., Colak, I. (2013) on knowledge based systems study on developing intuitive knowledge classifier and modeling of users’ domain dependent data in web. It contains real data about student’s knowledge status about the subject of Electrical DC Machine.[1] The dataset contained a sample size of 403 records with 5 attributes and 1 target value from student’s responses, details of attributes as below. The 5 
-attributes are different contributing factors that lead to achieving the knowledge level on the subject of Electrical DC Machine. 
+The goal of this project is to perform classification on developing students’ knowledge domain through data modeling. This project will employ K-mean and DBSCAN approach in clustering modeling. The dataset used in this project was collected by H. T. Kahraman, Sagiroglu, S., Colak, I. (2013) on knowledge based systems study on developing intuitive knowledge classifier and modeling of users’ domain dependent data in web. It contains real data about student’s knowledge status about the subject of Electrical DC Machine.[1] The dataset contained a sample size of 403 records with 5 attributes and 1 target value from student’s responses, details of attributes as below. The 5 attributes are different contributing factors that lead to achieving the knowledge level on the subject of Electrical DC Machine. 
 
 ![image](https://github.com/kitwong5/students_knowledge_with_k-mean_dbscan/assets/142315009/81ae8531-6cd6-477c-a539-91c9e62b9fb1)
 
@@ -102,6 +101,10 @@ means model, spherical-like data pattern, and the data points density.
 [1] H. T. Kahraman, Sagiroglu, S., Colak, I., Developing intuitive knowledge classifier and modeling of 
 users' domain dependent data in web, Knowledge Based Systems, vol. 37, page 283-295, 2013.
 [2] Kriegel, Hans-Peter; Kröger, Peer; Sander, Jörg; Zimek, Arthur (2011). "Density-based Clustering". WIREs Data Mining and Knowledge Discovery. 1 (3): 231–240. doi:10.1002/widm.30. S2CID 36920706. Archived from the original on 2016-11-17. Retrieved 2011-12-12.
+
+# Data Source
+User Knowledge Modeling Data Set
+More details can be found from the following: https://archive.ics.uci.edu/ml/datasets/User+Knowledge+Modeling
 
 
 

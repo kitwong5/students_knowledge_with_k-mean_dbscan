@@ -60,7 +60,7 @@ To compare the overall prediction result again the actual UNS values, the accura
 From the evaluated outcome, it concluded attributes exam result (PEG) and the degrees of study time (STG) were not able to accurately predict the level of knowledge (UNS). Maybe other attributes from the 
 User Knowledge dataset need to be added to the analysis in order to improve the prediction accuracy on the user’s level of knowledge. 
 
-Other than K Means cluster modeling, DBSCAN cluster model has also been performed for attributes PEG and STG. DBSCAN requires two parameters that they are the maximum distance between two samples to be considered in the same neighborhood (Eps) and the minimum number of points (minPTS).[2] Since no domain knowledge was obtained to specify these two parameters, a k-distance graph was employed in determining the Eps parameter value, and small value approach was used in determining the minPTS parameter. By running the k-distance graph, the optimal k-distance of 0.075 was identified for Eps parameter. For minPTS parameter, it was decided to use 3 as the minPTS parameter because the points distribution between PEG and STG are not tightly packed thus small minPTS was employed.
+Other than K Means cluster modeling, DBSCAN cluster model has also been performed for attributes PEG and STG. DBSCAN requires two parameters that they are the maximum distance between two samples to be considered in the same neighborhood (Eps) and the minimum number of points (minPTS). Since no domain knowledge was obtained to specify these two parameters, a k-distance graph was employed in determining the Eps parameter value, and small value approach was used in determining the minPTS parameter. By running the k-distance graph, the optimal k-distance of 0.075 was identified for Eps parameter. For minPTS parameter, it was decided to use 3 as the minPTS parameter because the points distribution between PEG and STG are not tightly packed thus small minPTS was employed.
 
 ![image](https://github.com/kitwong5/students_knowledge_with_k-mean_dbscan/assets/142315009/76e9dc40-614f-4dce-a4fc-9c8a2d1695c6)
 
@@ -83,10 +83,10 @@ degree of input on study time (the big purple cluster).
 
 To compare the cluster model results between K means and DBSCAN, K means is found to be more suitable for the usage of this User Knowledge dataset. This dataset is having 4 target values (very low, 
 low, middle, high), and the ideal number of cluster splits will be close to the target number values. Since K means allow a pre-defined number of splits beforehand, the result from K means is more applicable to 
-this dataset. [3] Other than that, K mean model is good in capture data patterns that have a spherical-like shape. As seems in the K mean model results, it always tries to construct a spherical-like shape around 
+this dataset. Other than that, K mean model is good in capture data patterns that have a spherical-like shape. As seems in the K mean model results, it always tries to construct a spherical-like shape around 
 the centroid. This makes it good to cluster this 2D User Knowledge dataset. In DBSCAN result, no matter how the input parameter be adjusted, it also ends up with one big cluster with many small to tiny 
 clusters around. Those small and tiny clusters are consisted with too less data points making it difficult to represent any findings. One of DBSCAN nature is it cannot cluster data sets well with dataset having 
-large differences in densities because the minPts-ε combination cannot be chosen appropriately for all clusters. [4] In this User Knowledge dataset, the data densities are with large differences that data points 
+large differences in densities because the minPts-ε combination cannot be chosen appropriately for all clusters. [2] In this User Knowledge dataset, the data densities are with large differences that data points 
 are highly packed in the low STG section and quite loose for other sections. The data point density differences might cause DBSCAN not able to perform as well in K means cluster model. Other than that, 
 since there is no domain subject expert who can contribute to the DBSCAN parameters setting, it makesDBSCAN result less reliable when compared to the K means model. The other drawback point on 
 DBSCAN is it’s difficult to evaluate its result. In the User knowledge dataset, data points are split across 4 target sectors. However, in our run of the DBSCAN result, only 1 large cluster was obtained. It’s different 
@@ -101,9 +101,7 @@ means model, spherical-like data pattern, and the data points density.
 # References
 [1] H. T. Kahraman, Sagiroglu, S., Colak, I., Developing intuitive knowledge classifier and modeling of 
 users' domain dependent data in web, Knowledge Based Systems, vol. 37, page 283-295, 2013.
-[2] Dr. Yongli Ren, Week 8 Lector Slide, week8-Clustering2v2-2021.pdf, page 24, 2023
-[3] Dr. Yongli Ren, Week 8 Lector Slide, week8-Clustering2v2-2021.pdf, page 21, 2023
-[3] Kriegel, Hans-Peter; Kröger, Peer; Sander, Jörg; Zimek, Arthur (2011). "Density-based Clustering". WIREs Data Mining and Knowledge Discovery. 1 (3): 231–240. doi:10.1002/widm.30. S2CID 36920706. Archived from the original on 2016-11-17. Retrieved 2011-12-12.
+[2] Kriegel, Hans-Peter; Kröger, Peer; Sander, Jörg; Zimek, Arthur (2011). "Density-based Clustering". WIREs Data Mining and Knowledge Discovery. 1 (3): 231–240. doi:10.1002/widm.30. S2CID 36920706. Archived from the original on 2016-11-17. Retrieved 2011-12-12.
 
 
 
